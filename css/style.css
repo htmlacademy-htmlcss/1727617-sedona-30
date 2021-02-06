@@ -129,20 +129,20 @@ img {
 
 /* Search hotel */
 
-.search-hotel__text {
+.search-hotel__inner {
     text-align: center;
 }
 
-.search-hotel__text h2 {
+.search-hotel__inner h2 {
     font-size: 30px;
 }
 
-.search-hotel__text h2,
-.search-hotel__text p {
+.search-hotel__inner h2,
+.search-hotel__inner p {
     line-height: 24px;
 }
 
-.search-hotel__text a {
+.search-hotel__inner a {
     font-size: 21px;
     line-height: 26px;
     text-decoration: none;
