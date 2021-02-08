@@ -206,20 +206,20 @@ img {
 
 /* Search results */
 
-.search-results__title {
+.hotel-item__title {
     line-height: 26px;
 }
 
-.search-results__title a {
+.hotel-item__title a {
     text-decoration: none;
     color: inherit;
 }
 
-.search-results__title a:hover {
+.hotel-item__title a:hover {
     color: var(--basic-blue);
 }
 
-.search-results__title a:active {
+.hotel-item__title a:active {
     color: var(--sort-list-btn-black);
 }
 
@@ -250,8 +250,8 @@ img {
     line-height: 18px;
 }
 
-.search-results__house-type,
-.search-results__house-price {
+.hotel-item__house-type,
+.hotel-item__house-price {
     color: var(--basic-dark-grey);
 }
 
@@ -266,33 +266,33 @@ img {
     color: var(--basic-white);
 }
 
-.house-type__btn {
+.btn--house-type {
     text-decoration: none;
     background-color: var(--basic-blue);
 }
 
-.house-type__btn:hover {
+.btn--house-type:hover {
     background-color: var(--btn-blue-hover);
 }
 
-.house-type__btn:active {
+.btn--house-type:active {
     background-color: var(--btn-blue-click);
     color: var(--sort-list-btn-white);
 }
 
-.house-price__btn {
+.btn--house-price {
     background-color: var(--basic-brown);
     text-transform: uppercase;
     border: none;
     cursor: pointer;
 }
 
-.house-price__btn:hover,
+.btn--house-price:hover,
 .search-hotel__button:hover{
     background-color: var(--btn-brown-hover);
 }
 
-.house-price__btn:active,
+.btn--house-price:active,
 .search-hotel__button:active {
     background-color: var(--btn-brown-click);
     color: var(--sort-list-btn-white);
@@ -324,10 +324,10 @@ img {
     line-height: 26px;
 }
 
-.footer__logo-svg:hover path {
+.main-footer__logo-svg:hover path {
     fill: var(--basic-blue);
 }
 
-.footer__logo-svg:active path {
+.main-footer__logo-svg:active path {
     fill: var(--footer-logo-active);
 }
