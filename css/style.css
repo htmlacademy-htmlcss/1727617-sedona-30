@@ -25,7 +25,7 @@
     --features-list-bg: #eee;
     --bg-grey: #f2f2f2;
     --bg-grey-hover: #ebebeb;
-    --text-rate: #666;
+    --text-rating: #666;
     --bg-filter-line: #ababab;
     --checkbox-disabled: #6a6a6a;
     --arrow-normal: #cacaca;
@@ -34,6 +34,10 @@
     --btn-brown-hover: #604e43;
     --btn-brown-click: #503e33;
     --bg-feature-photo: #a5907e;
+    --bg-filter-photo: #6c7780;
+    --footer-logo-active: #bdbbbc;
+    --sort-list-btn-black: rgba(0,0,0, .3);
+    --sort-list-btn-white: rgba(255,255,255, .3);
 }
 
 /* Global */
@@ -72,9 +76,21 @@ img {
     list-style: none;
 }
 
-.main-navigation__list a {
+.main-navigation__link {
     color: var(--basic-black);
     text-decoration: none;
+}
+
+.main-navigation__link--active {
+    color: var(--basic-brown);
+}
+
+.main-navigation__link:hover {
+    color: var(--basic-blue);
+}
+
+.main-navigation__link:active {
+    color: var(--sort-list-btn-black);
 }
 
 /* Intro */
@@ -151,6 +167,137 @@ img {
     font-weight: 700;
 }
 
+/* Filter */
+
+.filter {
+    color: var(--basic-white);
+    background-color: var(--bg-filter-photo);
+}
+
+.search-form__price button,
+.search-form__price input {
+    color: inherit;
+}
+
+.search-form__price-btn {
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.search-form__price-btn,
+.search-form__price input {
+    background-color: transparent;
+    border: 2px solid var(--basic-white);
+}
+
+.search-form__price-btn:hover {
+    color: var(--basic-black);
+    background-color: var(--basic-white);
+}
+
+.filter legend {
+    font-size: 16px;
+}
+
+.search-form__infrastructure ul,
+.search-form__housing ul {
+    list-style: none;
+}
+
+/* Search results */
+
+.hotel-item__title {
+    line-height: 26px;
+}
+
+.hotel-item__title a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hotel-item__title a:hover {
+    color: var(--basic-blue);
+}
+
+.hotel-item__title a:active {
+    color: var(--sort-list-btn-black);
+}
+
+.search-results__header ul {
+    list-style: none;
+}
+
+.sort-list__btn {
+    text-decoration: underline dotted var(--basic-blue);
+    color: var(--sort-list-btn-black);
+}
+
+.sort-list__btn--active {
+    color: var(--basic-blue);
+    text-decoration: none;
+}
+
+.sort-list__btn:hover {
+    color: var(--basic-blue);
+}
+
+.sort-list__btn:active {
+    color: var(--basic-black);
+}
+
+.search-results__sort-list {
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.hotel-item__house-type,
+.hotel-item__house-price {
+    color: var(--basic-dark-grey);
+}
+
+.rating-value {
+    color: var(--text-rating);
+    background-color: var(--bg-grey);
+    display: inline-block;
+}
+
+.btn {
+    font-weight: 700;
+    color: var(--basic-white);
+}
+
+.btn--house-type {
+    text-decoration: none;
+    background-color: var(--basic-blue);
+}
+
+.btn--house-type:hover {
+    background-color: var(--btn-blue-hover);
+}
+
+.btn--house-type:active {
+    background-color: var(--btn-blue-click);
+    color: var(--sort-list-btn-white);
+}
+
+.btn--house-price {
+    background-color: var(--basic-brown);
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+}
+
+.btn--house-price:hover,
+.search-hotel__button:hover{
+    background-color: var(--btn-brown-hover);
+}
+
+.btn--house-price:active,
+.search-hotel__button:active {
+    background-color: var(--btn-brown-click);
+    color: var(--sort-list-btn-white);
+}
+
 /* Footer */
 
 .main-footer__contacts {
@@ -177,4 +324,10 @@ img {
     line-height: 26px;
 }
 
+.main-footer__logo-svg:hover path {
+    fill: var(--basic-blue);
+}
 
+.main-footer__logo-svg:active path {
+    fill: var(--footer-logo-active);
+}
