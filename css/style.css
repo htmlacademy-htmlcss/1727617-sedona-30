@@ -127,6 +127,13 @@ img {
 
 .intro-description {
     line-height: 26px;
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+.intro-description__title {
+    width: 470px;
+    margin: 0 auto;
 }
 
 /* Feature */
@@ -135,11 +142,11 @@ img {
     display: grid;
 }
 
-.feature__inner.feature-one {
+.feature__inner--one {
     grid-template-columns: 1fr 2fr;
 }
 
-.feature__inner.feature-second {
+.feature__inner--two {
     grid-template-columns: 2fr 1fr;
 }
 
