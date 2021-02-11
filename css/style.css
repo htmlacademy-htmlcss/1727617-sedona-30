@@ -36,8 +36,10 @@
     --bg-feature-photo: #a5907e;
     --bg-filter-photo: #6c7780;
     --footer-logo-active: #bdbbbc;
+    --hotel-item-border: #e5e5e5;
     --sort-list-btn-black: rgba(0,0,0, .3);
     --sort-list-btn-white: rgba(255,255,255, .3);
+    
 }
 
 /* Global */
@@ -240,9 +242,28 @@ img {
     background-color: var(--bg-filter-photo);
 }
 
+.search-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+    padding: 0 72px;
+}
+
+.search-form__infrastructure,
+.search-form__housing {
+    justify-self: start;
+}
+
+.search-form__price {
+    justify-self: self-end;
+}
+
 .search-form__price button,
 .search-form__price input {
     color: inherit;
+}
+
+.search-form__price-btn-box {
+    text-align: center;
 }
 
 .search-form__price-btn {
@@ -268,9 +289,53 @@ img {
 .search-form__infrastructure ul,
 .search-form__housing ul {
     list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 /* Search results */
+
+.search-results h2 {
+    display: none;
+}
+
+.search-results__header {
+    display: grid;
+    align-items: center;
+    grid-template-columns: max-content 200px 200px 1fr;
+    padding: 0 72px;
+}
+
+.search-results__sort-list {
+    margin: 0;
+    padding: 0;
+}
+
+.search-results__sort-direction {
+    justify-self: self-end;
+}
+
+.search-results__sort-title {
+    margin-left: 46px;
+}
+
+.hotel-item {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    border-top: 1px solid var(--hotel-item-border);
+    border-bottom: 1px solid var(--hotel-item-border);
+    padding: 30px 72px;
+}
+
+.hotel-item__rating {
+    justify-self: self-end;
+}
+
+.hotel-item__house-type,
+.hotel-item__house-price {
+    display: inline-block;
+}
 
 .hotel-item__title {
     line-height: 26px;
@@ -411,4 +476,3 @@ img {
 .main-footer__logo-svg:active path {
     fill: var(--footer-logo-active);
 }
-
