@@ -277,7 +277,7 @@ img {
 .search-form {
     display: grid;
     grid-template-columns: 1fr 1fr 2fr;
-    padding: 0 72px;
+    padding: 26px 72px 32px;
 }
 
 .search-form__infrastructure,
@@ -330,21 +330,35 @@ img {
 .search-results__header {
     display: grid;
     align-items: center;
-    grid-template-columns: max-content 200px 200px 1fr;
-    padding: 0 72px;
+    grid-template-columns: max-content max-content max-content 1fr;
+    padding: 30px 72px;
+}
+
+.search-results__header .title {
+    margin: 0;
+    line-height: 26px;
 }
 
 .search-results__sort-list {
     margin: 0;
     padding: 0;
+    display: flex;
+    margin-left: 38px;
+}
+
+.search-results__sort-list li + li {
+    margin-left: 30px;
 }
 
 .search-results__sort-direction {
     justify-self: self-end;
+    margin: 0;
 }
 
 .search-results__sort-title {
-    margin-left: 46px;
+    margin: 0;
+    margin-left: 42px;
+    line-height: 18px;
 }
 
 .hotel-item {
@@ -356,8 +370,17 @@ img {
     padding: 30px 72px;
 }
 
+.hotel-item__info {
+    display: flex;
+}
+
+.hotel-item__description {
+    margin-left: 28px;
+}
+
 .hotel-item__rating {
     justify-self: self-end;
+    text-align: right;
 }
 
 .hotel-item__house-type,
@@ -366,8 +389,16 @@ img {
     vertical-align: bottom;
 }
 
+.hotel-item__house-type p,
+.hotel-item__house-price p {
+    margin: 0;
+    margin-bottom: 15px;
+}
+
 .hotel-item__title {
     line-height: 26px;
+    margin: 0;
+    margin-bottom: 7px;
 }
 
 .hotel-item__title a {
@@ -420,6 +451,8 @@ img {
     background-color: var(--bg-grey);
     display: inline-block;
     vertical-align: middle;
+    margin: 0;
+    margin-top: 40px;
 }
 
 .btn {
