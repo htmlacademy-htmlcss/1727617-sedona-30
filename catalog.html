@@ -44,20 +44,23 @@
                     <ul class="infrastructure-list">
                         <li class="infrastructure-list__item">
                             <label>
-                                <input type="checkbox" name="waterpool" value="Бассейн" checked>
-                                <span>Бассейн</span>
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="waterpool"
+                                    value="Бассейн" checked>
+                                <span class="checkbox-indicator">Бассейн</span>
                             </label>
                         </li>
                         <li class="infrastructure-list__item">
                             <label>
-                                <input type="checkbox" name="parking" value="Парковка">
-                                <span>Парковка</span>
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="parking"
+                                    value="Парковка">
+                                <span class="checkbox-indicator">Парковка</span>
                             </label>
                         </li>
                         <li class="infrastructure-list__item">
                             <label>
-                                <input type="checkbox" name="wifi" value="Вай-фай">
-                                <span>Wi-Fi</span>
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="wifi"
+                                    value="Вай-фай">
+                                <span class="checkbox-indicator">Wi-Fi</span>
                             </label>
                         </li>
                     </ul>
@@ -67,20 +70,23 @@
                     <ul class="housing-list">
                         <li class="housing-list__item">
                             <label>
-                                <input type="checkbox" name="hotel" value="Отель" checked>
-                                <span>Гостиница</span>
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="hotel"
+                                    value="Отель" checked>
+                                <span class="checkbox-indicator">Гостиница</span>
                             </label>
                         </li>
                         <li class="housing-list__item">
                             <label>
-                                <input type="checkbox" name="motel" value="Мотель" checked>
-                                <span>Мотель</span>
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="motel"
+                                    value="Мотель" checked>
+                                <span class="checkbox-indicator">Мотель</span>
                             </label>
                         </li>
                         <li class="housing-list__item">
                             <label>
-                                <input type="checkbox" name="apartments" value="Апартаменты" checked>
-                                <span>Апартаменты</span>
+                                <input class="visually-hidden filter-input-checkbox" type="checkbox" name="apartments"
+                                    value="Апартаменты" checked>
+                                <span class="checkbox-indicator">Апартаменты</span>
                             </label>
                         </li>
                     </ul>
@@ -88,21 +94,21 @@
                 <fieldset class="search-form__price">
                     <legend>Стоимость в сутки (Р):</legend>
                     <div class="indicator">
-                        <label>
+                        <label class="min-price">
                             от
                             <input type="text" name="min-price" value="0">
                         </label>
-                        <label>
+                        <label class="max-price">
                             до
                             <input type="text" name="max-price" value="3000">
                         </label>
                     </div>
                     <div class="range">
                         <div class="range__bar">
-                            <div class="range__line">Активная полоса фильтра</div>
+                            <div class="range__line"></div>
                         </div>
-                        <div class="range__min">Кнопка в начале полосы фильтра</div>
-                        <div class="range__max">Кнопка в конце активной полосы фильтра</div>
+                        <div class="range__toggle range__toggle--min"></div>
+                        <div class="range__toggle range__toggle--max"></div>
                     </div>
                     <div class="search-form__price-btn-box">
                         <button class="search-form__price-btn" type="submit">Показать</button>
@@ -130,10 +136,16 @@
                 </ul>
                 <ul class="search-results__sort-direction">
                     <li>
-                        <a href="#">По возрастанию</a>
+                        <a href="#"><svg class="search-results__sort-direction-svg" width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.5 0L0 10H11L5.5 0Z" fill="#CACACA" />
+                            </svg></a>
                     </li>
                     <li>
-                        <a href="#">По убыванию</a>
+                        <a href="#"><svg class="search-results__sort-direction-svg" width="11" height="10" viewBox="0 0 11 10" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path d="M5.5 10L0 0H11" fill="#81B3D2" />
+                            </svg></a>
                     </li>
                 </ul>
             </div>
@@ -157,9 +169,7 @@
                     </div>
                 </div>
                 <div class="hotel-item__rating">
-                    <div class="rating-stars">
-                        Иконки звёздочек
-                    </div>
+                    <div class="rating-stars rating-stars--four"></div>
                     <p class="rating-value">Рейтинг: 8,5</p>
                 </div>
             </article>
@@ -183,9 +193,7 @@
                     </div>
                 </div>
                 <div class="hotel-item__rating">
-                    <div class="rating-stars">
-                        Иконки звёздочек
-                    </div>
+                    <div class="rating-stars rating-stars--three"></div>
                     <p class="rating-value">Рейтинг: 8,9</p>
                 </div>
             </article>
@@ -209,9 +217,7 @@
                     </div>
                 </div>
                 <div class="hotel-item__rating">
-                    <div class="rating-stars">
-                        Иконки звёздочек
-                    </div>
+                    <div class="rating-stars rating-stars--two"></div>
                     <p class="rating-value">Рейтинг: 9,2</p>
                 </div>
             </article>
