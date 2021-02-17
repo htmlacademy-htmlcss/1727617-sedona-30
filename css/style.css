@@ -572,11 +572,11 @@ img {
     line-height: 18px;
 }
 
-.search-results__sort-direction-svg:hover path {
+.sort-direction-link:hover path {
     fill: var(--basic-black);
 }
 
-.search-results__sort-direction-svg:active path {
+.sort-direction-link:active path {
     fill: var(--basic-blue);
 }
 
@@ -682,15 +682,15 @@ img {
     margin-left: auto;
 }
 
-.rating-stars--four {
+.rating-stars--4 {
     width: 89px;
 }
 
-.rating-stars--three {
+.rating-stars--3 {
     width: 65px;
 }
 
-.rating-stars--two {
+.rating-stars--2 {
     width: 41px;
 }
 
@@ -845,10 +845,10 @@ img {
     margin-right: 8px;
 }
 
-.main-footer__logo-svg:hover path {
+.main-footer__logo:hover path {
     fill: var(--basic-blue);
 }
 
-.main-footer__logo-svg:active path {
+.main-footer__logo:active path {
     fill: var(--footer-logo-active);
 }
