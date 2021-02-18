@@ -84,6 +84,7 @@ img {
     margin: 0 auto;
     background-color: var(--basic-white);
     box-shadow: 0px 5px 15px var(--shadow-bg);
+    position: relative;
 }
 
 .visually-hidden {
@@ -514,6 +515,10 @@ img {
     left: 80%;
 }
 
+.range__toggle:hover {
+    transform: scale(1.2);
+}
+
 .range__bar {
     height: 2px;
     background-color: var(--range-bar-bg);
@@ -706,11 +711,13 @@ img {
     padding: 3px 17px;
 }
 
-.btn--house-type:hover {
+.btn--house-type:hover,
+.date-btn:hover {
     background-color: var(--btn-blue-hover);
 }
 
-.btn--house-type:active {
+.btn--house-type:active,
+.date-btn:active {
     background-color: var(--btn-blue-click);
     color: var(--sort-list-btn-white);
 }
@@ -745,6 +752,13 @@ img {
     padding-bottom: 36px;
     align-items: center;
     background-color: var(--main-header-bg);
+}
+
+.container .main-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .main-footer__contacts,
@@ -851,4 +865,137 @@ img {
 
 .main-footer__logo:active path {
     fill: var(--footer-logo-active);
+}
+
+/* Modal */
+
+.search-modal {
+    position: absolute;
+    display: none;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--basic-white);
+    width: 568px;
+    padding: 55px;
+    box-sizing: border-box;
+    font-weight: 700;
+    box-shadow: 0px 7px 15px var(--shadow-bg);
+}
+
+.show-modal {
+    display: block;
+}
+
+.search-modal label {
+    line-height: 26px;
+}
+
+.date-in,
+.date-out {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.date-in__title,
+.date-out__title {
+    width: 112px;
+}
+
+.date-in a,
+.date-out a {
+    text-decoration: none;
+    position: absolute;
+    right: 9px;
+}
+
+.date-in input,
+.date-out input {
+    flex-grow: 1;
+    padding: 4px 9px 4px 13px;
+    line-height: 26px;
+    font-weight: 700;
+    color: var(--basic-black)
+    text-transform: uppercase;
+    background-color: var(--bg-grey);
+    border: none;
+    text-transform: uppercase;
+}
+
+.date-box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 54px;
+}
+
+.date-box label {
+    margin-right: 40px;
+}
+
+.info-older-btn,
+.info-kids-btn {
+    display: flex;
+    background-color: var(--bg-grey);
+    align-items: center;
+    height: 38px;
+}
+
+.info-older-btn a,
+.info-kids-btn a {
+    text-decoration: none;
+    height: 38px;
+    width: 38px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-older-btn input,
+.info-kids-btn input {
+    width: 26px;
+    background-color: var(--bg-grey);
+    border: none;
+    padding: 0;
+    padding: 11px 5px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.info-kids {
+    margin-left: auto;
+}
+
+.date-btn {
+    width: 100%;
+    background-color: var(--basic-blue);
+    border: none;
+    color: var(--basic-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    height: 58px;
+    line-height: 26px;
+    padding: 0;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.search-modal input:hover {
+    background-color: var(--bg-grey-hover);
+}
+
+.search-modal input:focus {
+    background-color: var(--basic-white);
+}
+
+.modal-svg__link:hover path,
+.modal-svg__link:hover rect{
+    fill: var(--basic-black);
+}
+
+.modal-svg__link:active path,
+.modal-svg__link:active rect{
+    fill: var(--basic-blue);
 }
