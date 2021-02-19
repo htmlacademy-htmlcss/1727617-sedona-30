@@ -84,6 +84,7 @@ img {
     margin: 0 auto;
     background-color: var(--basic-white);
     box-shadow: 0px 5px 15px var(--shadow-bg);
+    position: relative;
 }
 
 .visually-hidden {
@@ -373,7 +374,7 @@ img {
 
 .search-form__infrastructure,
 .search-form__housing {
-    justify-self: start;
+    justify-self: stretch;
 }
 
 .search-form__infrastructure legend {
@@ -512,6 +513,10 @@ img {
 
 .range__toggle--max {
     left: 80%;
+}
+
+.range__toggle:hover {
+    transform: scale(1.2);
 }
 
 .range__bar {
@@ -706,11 +711,13 @@ img {
     padding: 3px 17px;
 }
 
-.btn--house-type:hover {
+.btn--house-type:hover,
+.date-btn-box button:hover {
     background-color: var(--btn-blue-hover);
 }
 
-.btn--house-type:active {
+.btn--house-type:active,
+.date-btn-box button:active {
     background-color: var(--btn-blue-click);
     color: var(--sort-list-btn-white);
 }
@@ -745,6 +752,13 @@ img {
     padding-bottom: 36px;
     align-items: center;
     background-color: var(--main-header-bg);
+}
+
+.container .main-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 .main-footer__contacts,
@@ -851,4 +865,134 @@ img {
 
 .main-footer__logo:active path {
     fill: var(--footer-logo-active);
+}
+
+/* Modal */
+
+.search-modal {
+    position: absolute;
+    display: none;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--basic-white);
+    width: 568px;
+    padding: 55px;
+    box-sizing: border-box;
+    font-weight: 700;
+    box-shadow: 0px 7px 15px var(--shadow-bg);
+}
+
+.show-modal {
+    display: block;
+}
+
+.search-modal label {
+    line-height: 26px;
+}
+
+.date-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.date-label {
+    width: 112px;
+}
+
+.date-label.info-kids {
+    width: 65px;
+}
+
+.date-container input{
+    flex-grow: 1;
+    padding: 4px 9px 4px 13px;
+    line-height: 26px;
+    font-weight: 700;
+    color: var(--basic-black);
+    text-transform: uppercase;
+    background-color: var(--bg-grey);
+    border: none;
+    text-transform: uppercase;
+}
+
+.date-btn-calendar {
+    position: absolute;
+    right: 9px;
+}
+
+.date-btn {
+    margin: 0;
+    padding: 0;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+}
+
+.date-btn-count {
+    width: 38px;
+    height: 38px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.amount-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 54px;
+}
+
+.count-wrapper {
+    display: flex;
+    background-color: var(--bg-grey);
+    align-items: center;
+    height: 38px;
+}
+
+.count-wrapper input {
+    width: 26px;
+    background-color: var(--bg-grey);
+    border: none;
+    padding: 11px 5px;
+    text-align: center;
+    font-weight: 700;
+}
+
+.info-kids {
+    margin-left: auto;
+}
+
+.date-btn-box button {
+    width: 100%;
+    background-color: var(--basic-blue);
+    border: none;
+    color: var(--basic-white);
+    text-transform: uppercase;
+    font-weight: 700;
+    height: 58px;
+    line-height: 26px;
+    padding: 0;
+    font-size: 21px;
+    cursor: pointer;
+}
+
+.search-modal input:hover {
+    background-color: var(--bg-grey-hover);
+}
+
+.search-modal input:focus {
+    background-color: var(--basic-white);
+}
+
+.date-btn:hover path,
+.date-btn:hover rect{
+    fill: var(--basic-black);
+}
+
+.date-btn:active path,
+.date-btn:active rect{
+    fill: var(--basic-blue);
 }
