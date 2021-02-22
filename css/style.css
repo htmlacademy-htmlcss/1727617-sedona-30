@@ -137,6 +137,10 @@ img {
     margin-right: 20%;
 }
 
+.main-navigation__list li + li {
+    margin-left: 6%;
+}
+
 .main-navigation__item--left {
     text-align: left;
 }
@@ -186,7 +190,7 @@ img {
 
 .intro-description__title {
     width: 470px;
-    margin: 0 auto 25px;
+    margin: 0 auto 44px;
 }
 
 .intro-description__text {
@@ -211,13 +215,22 @@ img {
     background-color: var(--basic-blue);
     color: var(--basic-white);
     text-align: center;
-    padding: 40px;
+    padding: 48px 40px 30px 40px;
 }
 
 .feature__description h2 {
     width: 150px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 0 auto;
+    margin-bottom: 27px;
+}
+
+.feature__description p {
+    margin: 0;
+}
+
+.feature__description span {
+    display: block;
+    margin-bottom: 24px;
 }
 
 .feature__photo {
@@ -251,7 +264,7 @@ img {
 }
 
 .advantages__item h3 {
-    margin-bottom: 25px;
+    margin-bottom: 27px;
 }
 
 .advantages__item::after {
@@ -293,7 +306,7 @@ img {
 
 .features-list__item {
     text-align: center;
-    padding: 47px 71px 54px;
+    padding: 47px 71px 33px;
 }
 
 .features-list__item h2 {
@@ -318,7 +331,7 @@ img {
     font-size: 30px;
     margin: 0;
     margin-top: 58px;
-    margin-bottom: 25px;
+    margin-bottom: 30px;
 }
 
 .search-hotel__inner p {
@@ -354,6 +367,7 @@ img {
     background-color: var(--bg-filter-photo);
     background-image: url(../img/filter-background.jpg);
     background-size: cover;
+    min-height: 217px;
 }
 
 .filter fieldset {
@@ -378,7 +392,7 @@ img {
 }
 
 .search-form__infrastructure legend {
-    margin-right: 110px;
+    margin-right: 118px;
 }
 
 .search-form__price {
@@ -432,7 +446,7 @@ img {
 
 .search-form__price-btn-box {
     text-align: center;
-    margin-top: 33px;
+    margin-top: 34px;
 }
 
 .search-form__price-btn {
@@ -463,7 +477,7 @@ img {
     list-style: none;
     margin: 0;
     padding: 0;
-    margin-top: 20px;
+    margin-top: 24px;
 }
 
 .indicator {
@@ -477,7 +491,7 @@ img {
 .indicator label {
     display: inline-block;
     width: 90px;
-    padding-left: 60px;
+    vertical-align: bottom;
 }
 
 .indicator::after {
@@ -489,6 +503,14 @@ img {
     height: 22px;
     transform: translate(-50%,-50%);
     background-color: var(--basic-white);
+}
+
+.min-price {
+    padding-left: 67px;
+}
+
+.max-price {
+    padding-left: 52px;
 }
 
 .range {
@@ -540,7 +562,6 @@ img {
 
 .search-results__header {
     display: grid;
-    align-items: center;
     grid-template-columns: max-content max-content max-content 1fr;
     padding: 30px 72px;
 }
@@ -558,12 +579,13 @@ img {
 }
 
 .search-results__sort-list li + li {
-    margin-left: 30px;
+    margin-left: 34px;
 }
 
 .search-results__sort-direction {
     justify-self: self-end;
     margin: 0;
+    padding: 0;
     display: flex;
 }
 
@@ -573,8 +595,13 @@ img {
 
 .search-results__sort-title {
     margin: 0;
-    margin-left: 42px;
+    margin-left: 48px;
     line-height: 18px;
+    font-size: 12px;
+}
+
+.sort-direction-link {
+    vertical-align: sub;
 }
 
 .sort-direction-link:hover path {
@@ -588,18 +615,23 @@ img {
 .hotel-item {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    align-items: center;
+    align-items: flex-end;
     border-top: 1px solid var(--hotel-item-border);
     border-bottom: 1px solid var(--hotel-item-border);
-    padding: 30px 72px;
+    padding: 23px 72px 30px;
 }
 
 .hotel-item__info {
     display: flex;
+    align-items: flex-end;
+}
+
+.hotel-item__info > a {
+    height: 90px;
 }
 
 .hotel-item__description {
-    margin-left: 28px;
+    margin-left: 30px;
 }
 
 .hotel-item__rating {
@@ -643,13 +675,16 @@ img {
 }
 
 .sort-list__btn {
-    text-decoration: underline dotted var(--basic-blue);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--basic-blue);
     color: var(--sort-list-btn-black);
+    vertical-align: middle;
 }
 
 .sort-list__btn--active {
     color: var(--basic-blue);
     text-decoration: none;
+    vertical-align: middle;
 }
 
 .sort-list__btn:hover {
@@ -676,7 +711,7 @@ img {
     display: inline-block;
     vertical-align: middle;
     margin: 0;
-    margin-top: 40px;
+    margin-top: 46px;
     padding: 3px 14px;
 }
 
@@ -708,6 +743,7 @@ img {
     text-decoration: none;
     background-color: var(--basic-blue);
     display: inline-block;
+    vertical-align: bottom;
     padding: 3px 17px;
 }
 
@@ -750,7 +786,10 @@ img {
     grid-template-columns: 1fr 1fr 1fr;
     padding-top: 23px;
     padding-bottom: 36px;
-    align-items: center;
+    box-sizing: border-box;
+    padding-left: 57px;
+    padding-right: 58px;
+    align-items: flex-end;
     background-color: var(--main-header-bg);
 }
 
@@ -869,6 +908,10 @@ img {
 
 /* Modal */
 
+.search-map {
+    display: flex;
+}
+
 .search-modal {
     position: absolute;
     display: none;
@@ -895,7 +938,7 @@ img {
     justify-content: space-between;
     position: relative;
     align-items: center;
-    margin-bottom: 30px;
+    margin-bottom: 29px;
 }
 
 .date-label {
@@ -908,7 +951,7 @@ img {
 
 .date-container input{
     flex-grow: 1;
-    padding: 4px 9px 4px 13px;
+    padding: 6px 9px 6px 13px;
     line-height: 26px;
     font-weight: 700;
     color: var(--basic-black);
@@ -921,6 +964,8 @@ img {
 .date-btn-calendar {
     position: absolute;
     right: 9px;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 .date-btn {
