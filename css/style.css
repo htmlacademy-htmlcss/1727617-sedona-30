@@ -113,6 +113,7 @@ img {
     top: 0;
     left: 50%;
     transform: translateX(-50%);
+    z-index: 1;
 }
 
 .main-navigation {
@@ -358,6 +359,12 @@ img {
     display: block;
     margin: 0 auto;
     width: 568px;
+    background-color: var(--basic-brown);
+    text-transform: uppercase;
+    cursor: pointer;
+    color: var(--basic-white);
+    line-height: 26px;
+    border: none;
 }
 
 /* Filter */
@@ -1033,7 +1040,9 @@ img {
 }
 
 .date-btn:hover path,
-.date-btn:hover rect{
+.date-btn:hover rect,
+.date-btn:focus path,
+.date-btn:focus rect {
     fill: var(--basic-black);
 }
 
