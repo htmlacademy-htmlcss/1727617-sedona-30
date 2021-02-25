@@ -470,7 +470,8 @@ img {
     border: 2px solid var(--basic-white);
 }
 
-.search-form__price-btn:hover {
+.search-form__price-btn:hover,
+.search-form__price-btn:focus {
     color: var(--basic-black);
     background-color: var(--basic-white);
 }
