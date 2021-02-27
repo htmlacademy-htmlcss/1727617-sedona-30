@@ -120,7 +120,7 @@
     </section>
 
     <section class="search-map">
-      <div class="search-modal show-modal">
+      <div class="search-modal">
         <h2 class="visually-hidden">Подбор гостиницы</h2>
         <form method="GET" action="https://echo.htmlacademy.ru">
           <div class="date-container">
@@ -156,13 +156,13 @@
               Взрослые:
             </label>
             <div class="count-wrapper">
-              <button class="date-btn date-btn-count" type="button">
+              <button class="date-btn date-btn-count minus" type="button">
                 <svg aria-hidden="true" focusable="false" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="12" height="3" fill="#A9A9A9" />
                 </svg>
               </button>
               <input type="text" value="2" name="adult-amount" id="number-older">
-              <button class="date-btn date-btn-count" type="button">
+              <button class="date-btn date-btn-count plus" type="button">
                 <svg aria-hidden="true" focusable="false" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
@@ -174,13 +174,13 @@
               Дети:
             </label>
             <div class="count-wrapper">
-              <button class="date-btn date-btn-count" type="button">
+              <button class="date-btn date-btn-count minus" type="button">
                 <svg aria-hidden="true" focusable="false" width="12" height="3" viewBox="0 0 12 3" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <rect width="12" height="3" fill="#A9A9A9" />
                 </svg>
               </button>
               <input type="text" value="0" name="children-amount" id="number-kids">
-              <button class="date-btn date-btn-count" type="button">
+              <button class="date-btn date-btn-count plus" type="button">
                 <svg aria-hidden="true" focusable="false" width="11" height="11" viewBox="0 0 11 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path fill-rule="evenodd" clip-rule="evenodd"
                     d="M4.23086 6.76932V11H6.76932V6.76932H11V4.23086H6.76932V0H4.23085V4.23086H0V6.76932H4.23086Z"
@@ -233,6 +233,9 @@
       </div>
     </footer>
   </div>
+
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>
