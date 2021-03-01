@@ -18,6 +18,8 @@ try {
     isStorageSupport = false;
 }
 
+modal.classList.add('hide-modal');
+
 button.addEventListener('click', function () {
     modal.classList.toggle('hide-modal');
     modal.classList.remove('modal-error');
