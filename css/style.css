@@ -87,7 +87,8 @@ img {
     position: relative;
 }
 
-.visually-hidden {
+.visually-hidden:not(:focus):not(:active),
+ input[type="checkbox"].visually-hidden {
     position: absolute;
     width: 1px;
     height: 1px;
@@ -98,7 +99,7 @@ img {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
-  }
+}
 
 /* Grid */
 
@@ -128,18 +129,27 @@ img {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .main-navigation__item{
     width: 20%;
 }
 
-.main-navigation__item:nth-child(2) {
+.main-navigation__item:nth-child(4n+2) {
     margin-right: 20%;
 }
 
-.main-navigation__list li + li {
-    margin-left: 6%;
+.main-navigation__item:nth-child(4n+1) {
+    margin-right: 18px;
+}
+
+.main-navigation__item:nth-child(4n+3) {
+    margin-left: -32px;
+}
+
+.main-navigation__item:nth-child(4n+4) {
+    margin-left: auto;
 }
 
 .main-navigation__item--left {
@@ -469,6 +479,12 @@ img {
     background-repeat: no-repeat;
 }
 
+.filter-input-checkbox:focus + .checkbox-indicator::after,
+.filter-input-checkbox:focus + .checkbox-indicator::before {
+    outline: auto highlight;
+    outline: auto -webkit-focus-ring-color;
+}
+
 .search-form__price button,
 .search-form__price input {
     color: inherit;
@@ -482,7 +498,7 @@ img {
 .search-form__price-btn {
     text-transform: uppercase;
     cursor: pointer;
-    height: 36px;
+    padding: 8px 0;
     width: 137px;
     border-radius: 2px;
 }
@@ -645,20 +661,19 @@ img {
 
 .hotel-item {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 135px auto auto;
     align-items: flex-end;
     border-top: 1px solid var(--hotel-item-border);
-    border-bottom: 1px solid var(--hotel-item-border);
     padding: 23px 72px 30px;
+}
+
+.hotel-item:last-child {
+    border-bottom: 1px solid var(--hotel-item-border);
 }
 
 .hotel-item__info {
     display: flex;
     align-items: flex-end;
-}
-
-.hotel-item__info > a {
-    height: 90px;
 }
 
 .hotel-item__description {
@@ -674,12 +689,25 @@ img {
 .hotel-item__house-price {
     display: inline-block;
     vertical-align: bottom;
-}
-
-.hotel-item__house-type p,
-.hotel-item__house-price p {
     margin: 0;
     margin-bottom: 15px;
+}
+
+.hotel-item__house-type {
+    min-width: 110px;
+}
+
+.hotel-item__house-price {
+    margin-left: 2px;
+}
+
+.hotel-item__info img {
+    width: 135px;
+    height: 90px;
+}
+
+.hotel-item-img {
+    height: 90px;
 }
 
 .hotel-item__title {
@@ -724,6 +752,7 @@ img {
 
 .sort-list__btn:active {
     color: var(--basic-black);
+    border: none;
 }
 
 .search-results__sort-list {
@@ -778,6 +807,11 @@ img {
     padding: 3px 17px;
 }
 
+.button-list {
+    display: flex;
+    align-items: baseline;
+}
+
 .btn--house-type:hover,
 .date-btn-box button:hover {
     background-color: var(--btn-blue-hover);
@@ -794,9 +828,8 @@ img {
     text-transform: uppercase;
     border: none;
     cursor: pointer;
-    height: 27px;
-    width: 142px;
-    margin-left: 2px;
+    padding: 5.5px 17px;
+    margin-left: 6px;
 }
 
 .btn--house-price:hover,
@@ -860,6 +893,7 @@ img {
     margin: 0;
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .social-button {
