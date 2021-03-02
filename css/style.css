@@ -810,7 +810,6 @@ img {
 
 .button-list {
     display: flex;
-    align-items: baseline;
 }
 
 .btn--house-type:hover,
