@@ -780,6 +780,7 @@ img {
     background-image: url(../img/icons/star.svg);
     background-repeat: space;
     margin-left: auto;
+    font-size: 0;
 }
 
 .rating-stars--4 {
